@@ -32,7 +32,9 @@ Dotdotdot.prototype.dotdotdot = function(container) {
 
     clamp(container, {
       clamp: this.props.clamp,
-      truncationChar: this.props.truncationChar
+      useNativeClamp: false,
+      truncationChar: this.props.truncationChar,
+      truncationHTML: this.props.truncationHTML
     });
   }
 };
@@ -57,6 +59,7 @@ Dotdotdot.propTypes = {
     PropTypes.bool
   ]).isRequired,
   truncationChar: PropTypes.string,
+  truncationHTML: PropTypes.string,
   className: PropTypes.string
 };
 
